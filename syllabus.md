@@ -17,7 +17,7 @@
 
 * [Matrix/Element Chatroom](https://canvas.ucsc.edu/courses/85147/pages/using-element-slash-matrix)
 * [Weekly Schedule](#project-by-project)
-* [Code Talkthroughs](https://170a-2025-f.github.io/)
+* [Code Talkthroughs](https://aphid.github.io/fdm170a_f26/)
 
 ---
 
@@ -80,17 +80,17 @@ For each project, six core resources are provided on the course site:
 
 Assignments will be published via [CodePen](https://codepen.io/). Please create a free account prior to the first assignment. If you prefer using a local IDE (e.g., VS Code and GitHub), you may develop locally and post final revisions to CodePen.
 
-* **Main TalkThroughs Directory:** [170a-2025-f.github.io](https://170a-2025-f.github.io)
+* **Main TalkThroughs Directory:** [170a-2025-f.github.io](https://aphid.github.io/fdm170a_f26)
 
 | Assignment | TalkThrough Link | CodePen Starter Link |
 | :--- | :--- | :--- |
-| **1. Re-Sequencing** | [Re-Sequencing TalkThrough](https://170a-2025-f.github.io/TalkThroughs/resequencing.html) | [CodePen Starter](https://codepen.io/aphid/pen/YPwPZXw) |
-| **2. Concrete Poetry** | [Concrete Poetry TalkThrough](https://170a-2025-f.github.io/TalkThroughs/concrete.html) | [CodePen Starter](https://codepen.io/aphid/pen/PwZwpqp) |
-| **3. Montage** | [Montage TalkThrough](https://170a-2025-f.github.io/TalkThroughs/montage.html) | [CodePen Starter](https://codepen.io/aphid/pen/bNENqdo) |
-| **4. Drawings** | [Drawings TalkThrough](https://170a-2025-f.github.io/TalkThroughs/drawings.html) | [CodePen Starter](https://codepen.io/aphid/pen/NPxPpqw) |
-| **5. Multiscreen** | [Multiscreen TalkThrough](https://170a-2025-f.github.io/TalkThroughs/drawings.html) | [CodePen Starter](https://codepen.io/wsack/pen/ExqYzGX) |
-| **6. Structures** | [Structures TalkThrough](https://170a-2025-f.github.io/TalkThroughs/structures.html) | [CodePen Starter](https://codepen.io/aphid/pen/jEWEBPz) |
-| **7. Database Cinema**| [Database Cinema TalkThrough](https://170a-2025-f.github.io/TalkThroughs/database.html) | [CodePen Starter](https://codepen.io/aphid/pen/pvgveJK) |
+| **1. Re-Sequencing** | [Re-Sequencing TalkThrough](https://aphid.github.io/fdm170a_f26/TalkThroughs/resequencing.html) | [CodePen Starter](https://codepen.io/aphid/pen/YPwPZXw) |
+| **2. Concrete Poetry** | [Concrete Poetry TalkThrough](https://aphid.github.io/fdm170a_f26/TalkThroughs/concrete.html) | [CodePen Starter](https://codepen.io/aphid/pen/PwZwpqp) |
+| **3. Montage** | [Montage TalkThrough](https://aphid.github.io/fdm170a_f26/TalkThroughs/montage.html) | [CodePen Starter](https://codepen.io/aphid/pen/bNENqdo) |
+| **4. Drawings** | [Drawings TalkThrough](https://aphid.github.io/fdm170a_f26/TalkThroughs/drawings.html) | [CodePen Starter](https://codepen.io/aphid/pen/NPxPpqw) |
+| **5. Multiscreen** | [Multiscreen TalkThrough](https://aphid.github.io/fdm170a_f26/TalkThroughs/drawings.html) | [CodePen Starter](https://codepen.io/wsack/pen/ExqYzGX) |
+| **6. Structures** | [Structures TalkThrough](https://aphid.github.io/fdm170a_f26/TalkThroughs/structures.html) | [CodePen Starter](https://codepen.io/aphid/pen/jEWEBPz) |
+| **7. Database Cinema**| [Database Cinema TalkThrough](https://aphid.github.io/fdm170a_f26/TalkThroughs/database.html) | [CodePen Starter](https://codepen.io/aphid/pen/pvgveJK) |
 
 ---
 
