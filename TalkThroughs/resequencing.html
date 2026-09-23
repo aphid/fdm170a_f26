@@ -1,0 +1,303 @@
+<html>
+
+<head>
+    <!-- begin jszip -->
+    <script src="../talkthrough-library/js-includes/jszip.min.js"></script>
+    <script src="../talkthrough-library/js-includes/jszip-utils.min.js"></script>
+
+    <!-- begin codemirror includes-->
+    <script src="../talkthrough-library/js-includes/FileSaver.min.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/lib/codemirror.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/xml/xml.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/css/css.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/comment/comment.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldcode.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/comment-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/jshint.js"></script>
+    <script src="../talkthrough-library/js-includes/csslint.js"></script>
+    <script src="../talkthrough-library/js-includes/popcorn-complete.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/javascript-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/json-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/hint/css-hint.js"></script>
+
+
+
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/lint/lint.css">
+    <!-- end codemirror includes-->
+
+    <!-- talkthrough css and code-->
+    <link rel="stylesheet" href="../talkthrough-library/style.css">
+    <link rel="stylesheet" href="170a.css">
+
+    <title>#1 re-sequencing</title>
+</head>
+
+<body>
+
+    <h1>re-sequencing</h1>
+
+    <!-- buttons for tabs for the editor -->
+    <section id="buttons"></section>
+
+    <!-- live preview -->
+    <div id="live">
+        <section id="textareas"></section><iframe id="preview"></iframe>
+        <track src="captions/05_multiscreen.vtt" default lang="en">
+
+    </div>
+    <details>
+        <summary>Captions</summary>
+        <div id="captions">&nbsp;</div>
+    </details>
+
+    <!-- audio goes here -->
+    <div id="audioContainer" ;>
+        <audio id="audioclip" controls>
+            <!-- include ogg (vorbis or opus) for chrome/ffx -->
+            <!-- also include mp3, aac, or opus in a .caf container for safari -->
+
+            <!-- also include track with captions ... ok this doesn't work 'as is' with <audio>
+        we can make it a <video> and size it or use an additional library...
+      <track src="en_transcript.vtt" kind="captions" srclang="en" label="english_captions">
+      -->
+            <source src="../170a_media/resequencing.ogg">
+            <source src="../170a_media/resequencing.m4a">
+            <track src="captions/01_resequencing.vtt" default lang="en">
+
+        </audio>
+        <div>Playback rate: </div>
+        <div id="pbrate">100%</div>
+        <div><input type="range" autocomplete="off" min="75" value="100" max="160" step="5"></div>
+    </div>
+    <section id="checkbox"><input id="nochanges" name="nochanges" type="checkbox">
+        <label for="nochanges">Prevent audio from changing editor</label>
+    </section>
+    <section id="lower">
+        <h2>Chapters</h2>
+        <!-- Chapters follow this format, li with data-start in hh:mm:ss of where they begin -->
+        <ul id="index">
+            <li class="chapter" data-start="00:00:00">Intro to the talkthrough interface</li>
+            <li class="chapter" data-start="00:01:34">Assignment discussion</li>
+            <li class="chapter" data-start="00:02:31">HTML head and other tabs</li>
+            <li class="chapter" data-start="00:03:29">HTML body, table parts</li>
+            <li class="chapter" data-start="00:03:29">HTML body, table parts</li>
+            <li class="chapter" data-start="00:07:24">CSS</li>
+            <li class="chapter" data-start="00:10:56">wrapping up!</li>
+        </ul>
+        <h2>Errata</h2>
+        <div>
+            <p>When describing the "wide" CSS rule, I say that absent this rule that its width would be the native dimensions
+                of the image. It would actually revert to the other CSS rule, which is already applied to all IMG tags.</p>
+
+
+            <h2>Resources</h2>
+            documentation for...
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics">HTML Table Basics</a> - this is focused, for good reasons, on using tables for tabular data.</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Applying_color">Applying Color to HTML Elements</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">CSS Width</a></li>
+
+                <li>other layout techniques mentioned (fairly advanced): <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">CSS Grid</a></li>
+
+
+            </ul>
+
+
+            <pre style="display: none">
+    Hi everybody!
+    Since this is our first talkthrough, I'm going to introduce you to the talkthrough editor that we'll be using over the course of this course and to introduce you to some code that will hopefully 
+    make completing the first assignment a bit more straightforward.
+    
+    #outline audio.
+    If you can hear this, you hit play on the audio element, which is an HTML element we'll work with later on in the class.
+    The way these talkthroughs work is that at certain times in the audio file, things will happen in the code editor.
+    So as the audio plays, I'll be doing things like changing the active tab, change the content of editor,
+    and highlighting different parts of the code as we go along.
+
+
+    #outline editor.  #outline preview.  
+    These talkthroughs have two main parts, the editor, on the left, which has multiple tabs,
+    and the preview, to the right. The preview is an IFRAME element which loads 
+    the contents of the editor -- or editors.
+
+    #outline index
+    There's an index at the bottom, clicking the items in it will take you to that point in the audio, like if you want
+    to skip this intro in the future.
+    
+    Just a heads up - you can write code in this editor, you can save and download the current state of things by hitting
+    the floppy disk button - but if you move the playhead around, it's possible one of those audio events will change things
+    and erase what you did.  So if you use this as an editor after listening to the audio, but are tempted to go back and listen,
+    maybe open it up in another tab?  
+
+    #highlight save
+    The save button will create a zip file of everything in the editor based on its state when you press the button, and
+    then prompt you to download it.
+    Do this to get the files to work with a local text editor, like brackets, atom, or vscodium.
+    
+    
+
+    Alright: 
+    
+    For this assignment we need to be able to put some images in a sequence on the page, and for that we'll need to use
+    HTML and CSS. HTML expresses the structure of a page, and does so using tags that do and display different things.
+    CSS expresses style, how things look but also can affect how elements respond to a user.  THese are different languages
+    and have different syntax. If you feel a little inimidated by learning two languages at once, that's okay. We're adding
+    a third soon -- javascript. It's a lot to juggle, but luckily there's lots of good documentation available for when
+    we get stuck. Not if: when. We're going to make a lot of mistakes this quarter. Many will be frustrating. 
+    Some of them will be amazing!
+    
+    #highlight title, then link.
+    Let's start with the HTML tab. As I describe each section I'm going to fold the others.
+    There's a doctype declaration at the top because this is HTML5,
+    there's a head.. with a title, which you'll see if you save the page, we can't see it in the IFRAME.
+    It will appear in the tab for the open page and/or in the titlebar at the top of the page.
+    There's a link tag for the CSS, which is in a separate file. You can put CSS and JS and HTML all in one file
+    if everything is small, but it's a good habit to separate things out as they get complicated.
+
+    #switch tab
+    the CSS tab has the contents of the file in the link we just looked at, 
+    where we'll determing spacing and how things look.  There is a style tab around it, 
+    we can't see it. It's simpler this way. But know that the full
+    code is there, you'll see it if you hit the save button and look at the generated code.
+    
+    #switch tab
+    There is also a JS tab, for javascript. I don't think we'll be using it for this assignment, but it's there if you
+    want to use it. It runs in a script tag at the bottom of the document that we'll see in a moment.
+    
+    #switch tab
+    Let's move back to the HTML tab and look at the BODY section.
+    
+    #fold head #unfold body
+    There are a few html elements with tags here you should recognize.
+    We're using the TABLE element for this example. Generally, tables should be used for tabular data, like a spreadsheet.
+    Historically, they've been used for layouts and even as a way to compress an image in different blocks.
+    There are new and complicated ways to lay things out regularly in HTML
+    like flexbox and CSS grid, but for starting out
+    this is going to be much more straightforward. 
+    
+    #hightlight TABLE and ROW
+    We have a TABLE element here.
+    Tables have rows, which are denoted by the TR tag, T.R. table row.
+    Each row in the table is a TR element.
+    For now we have one.
+    Within each row, we have TDs, table data. In a regular grid, you have the same number of TDs in every row,
+    but tables can get complicated, with COLSPANS and ROWSPANS to join TDs together.
+    For this assignment, it's important to know that TRs and TDs will grow to fit their contents,
+    They also obey CSS rules.
+    
+
+    In the TDs we have IMG tags, IMG for image.
+    Notice that these don't have closing tags. They don't need them. Most tags do!
+    The src attribute contains a path to the image, either a RELATIVE path, like these. Relative paths give directions relative
+    from the path of the file the src tag is in.  In this case, it's in a folder called img.  If you download this code,
+    you can put your own images in that folder, and point to them similarly.
+
+    I screenshotted and clipped out just two of Muybridge's images using the technique Professor Sack 
+    described in the introduction video. They're in the same folder as this talkthrough so I can access them using a 
+    relative path in the SRC attribute.
+    
+    Let's walk through the table line by line. 
+    We open the table with the initial tag, and then similarly the first row.
+
+    In the first row we have three cells, each with a cyano image, which alternates between the two.
+    cyano horse 1, cyano horse 2.
+
+    Then the first row is closed. If you wanted to keep things very simple, you could have a single row with your images
+    and end the table here.
+    
+    Let's add a second row to the table.
+
+    #add line
+
+    This second row is similar to the first, except the middle row is empty. That's intentional. 
+    Sometimes it's nice to space things out a bit.
+    
+    #add line
+
+    Now, the third and last row is a bit different.  What's going on here?
+    The first TD in the row has an attribute, COLSPAN, set to 2, which makes it double-wide. It spans two columns.
+    
+    Because the image inside is twice as wide, in order to maintain its correct aspect ratio, it's also taller. 
+    This makes the remaining cell square (or nearly square). 
+    In this row I've added CSS classes to the image in the first cell using the class attribute. 
+    You can call a class anything as long as it matches with the CSS matches later. An IMG tag is always an IMG tag,
+    but you can call a class "wide" or "sblaglorgabob", short and descriptive is usually best.
+    
+    There's also a class attached to the last TD. Notice that it doesn't have an image tag in it. 
+    Where is it coming from?  To answer that, let's look at the CSS.
+    
+    ...Well, let's look at the CSS.
+    
+    #switch tab
+    css is a set of selectors, which point to the part of the HTML you want to style, and then a set of rules between
+    braces. 
+
+    Starting at the beginning, we have a selector for the body of our HTML, which is the full content area.
+    I've set the background to black. The CSS interpreter knows that black is a color. HTML has a lot of reserved keywords
+    that you can use to select a color.  Black is black.  Blue is blue. papayaWhip is the color of papaya whipped in cream. 
+
+    I've also added borders to the table and TD elements, 
+    this can be useful when laying things out so you can see their boundaries more clearly.  For this border I've useda 
+    different coding of color. Rather than a keyword, I've set the values of red green and blue using a rgb color.
+    These are numbers between 0 and 255.  0 0 0 is black, 255 255 255 is white.
+
+    I've used a similar but different color coding for TD coloration, which uses pairs of hexidecimal numbers, where you count
+    using numbers and letters, 0-9 a-f. f is 16. #9900cc is the same as rgb(60,0,80). There are other codings as well:
+    cmyk, rgba -- which is like rgb but with transparency, hsb for hue saturation brightness. Take a look at the MDN
+    documentation for more info.
+
+    I've set the width of the image to 30 vw, vw is a fractional unit of the width of the view window, 30 is just under 1/3.
+    If I use the image at its native resolution, it's a little too wide for the viewer on my laptop.
+    If the HTML wasn't sharing the screen with the editor, it would fit without this rule. See what works best for you.
+    
+    The image with class "wide" has its width set to 100%, that's 100% the size of its parent element, the TD.
+    Without that it would match the default height of the table cell. Because I'm not setting a height
+    it scales based on its aspect ratio, if you do set a height, you can create some interesting distortions. Try it!
+    Like color, width takes lots of different kinds of units. Percentages. pixels (px), ems and rems.
+    
+    The last cell, with the "square" class has its background set using CSS. This is a way to put - or fill an element
+    with an image without using the IMG tag. If there were text or other content in this element, 
+    the background-image would, as the property suggests, sit behind it. 
+
+    The background-image property usually takes a url that points to an image file using the format I've used here, 
+    but it can also take a gradient as an input. 
+    
+    The background-size property takes inputs of width and height, I'm setting it to
+    25% height, which is calculated from the element it's in, and letting it figure out the width.
+     
+    by default the image repeats within the element it's applied to, 25% is a quarter, so we get it 4 times.
+    there are ways to limit or prevent repetition, but I like the effect. Very Andy Warhol.
+    
+    
+
+    You can find some resources below that document some of the html and css features I used.
+    
+    Feel free to experiment with this code in the editor, although you'll be limited to the two images I captured.
+    You can download the current state as a zip file using the floppy disk icon at the top
+    to use in your own editor. 
+    
+    Experiment with different layouts and approaches to juxtaposition; consider working mostly horizontally for some
+    and vertically for others, how you use, or don't use, empty space and/or repetition in your sequences.
+    Also feel free to experiment with other tags, css properties, and so on. This code is an example to get you stared.
+    
+    Good luck, and have fun!
+
+</pre>
+    </section>
+    <script src="../talkthrough-library/cmexts.js"></script>
+
+    <script src="resequencing.js"></script>
+    <script src="170a.js"></script>
+</body>

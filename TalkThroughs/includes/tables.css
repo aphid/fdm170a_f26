@@ -1,0 +1,19 @@
+body { background: black; color: papyaWhip; }
+
+table { border: 3px solid blue; }
+
+td { 
+  border: 3px solid rebeccaPurple; 
+
+}
+
+img {
+ width: 25vw; 
+}
+
+.wide { width: 100%; }
+
+.square { color: white; 
+  background: url("img/cyano2.png");
+  background-size: auto 25%;
+}

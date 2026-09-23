@@ -1,0 +1,22 @@
+[
+    {
+        "start": "01:05:00",
+        "end": "1:05:15",
+        "description": "clip 1"
+    },
+    {
+        "start": 2500,
+        "end": 2505,
+        "description": "clip 2"
+    },
+    {
+        "start": 499,
+        "end": 503,
+        "description": "clip 3"
+    },
+    {
+        "start": 1595,
+        "end": 1610,
+        "description": "clip 4"
+    }
+]

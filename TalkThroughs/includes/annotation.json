@@ -1,0 +1,42 @@
+[
+    {
+        "frames": 156,
+        "description": "MEN AND MAGGOTS",
+        "transition": "(Fade out and cut to ...)"
+    },
+    {
+        "frames": 47,
+        "theme": "a1",
+        "shot": "ms",
+        "description": "A wave hurls itself against a stubborn, craggy breakwater jutting across a harbor",
+        "transition": "(Cut to ...)"
+    },
+    {
+        "frames": 64,
+        "theme": "a2",
+        "shot": "ms",
+        "description": "The powerful waves tumble forward over the rocks, seeking a weak point at the breakwater's base",
+        "transition": "(Cut to ...)"
+    },
+    {
+        "frames": 47,
+        "theme": "a3",
+        "shot": "ms",
+        "description": "The ceaseless probing continues as another wave breaks over the low jetty.",
+        "transition": "(Cut to ...)"
+    },
+    {
+        "frames": 67,
+        "theme": "a4",
+        "shot": "ms",
+        "description": "Broken, formless currents again lash the rocks at the base of the breakwater.",
+        "transition": "(Cut to ...)"
+    },
+    {
+        "frames": 27,
+        "theme": "a4",
+        "shot": "ms",
+        "description": "Spume flies at the jetty's edge as another wave renews the struggle between the two forces.",
+        "transition": "(Cut to ...)"
+    }
+]

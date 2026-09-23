@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <!-- begin jszip -->
+    <script src="../talkthrough-library/js-includes/jszip.min.js"></script>
+    <script src="../talkthrough-library/js-includes/jszip-utils.min.js"></script>
+
+    <!-- begin codemirror includes-->
+    <script src="../talkthrough-library/js-includes/FileSaver.min.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/lib/codemirror.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/xml/xml.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/css/css.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/comment/comment.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldcode.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/comment-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/jshint.js"></script>
+    <script src="../talkthrough-library/js-includes/csslint.js"></script>
+    <script src="../talkthrough-library/js-includes/popcorn-complete.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/javascript-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/json-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/hint/css-hint.js"></script>
+
+
+
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/lint/lint.css">
+    <!-- end codemirror includes-->
+
+    <!-- talkthrough css and code-->
+    <link rel="stylesheet" href="../talkthrough-library/style.css">
+
+    <link rel="stylesheet" href="170a.css">
+
+    <title>#7 database cinema</title>
+</head>
+
+<body>
+
+    <h1>talkthrough: database cinema</h1>
+
+    <!-- buttons for tabs for the editor -->
+    <section id="buttons"></section>
+
+    <!-- live preview -->
+    <div id="live">
+        <section id="textareas"></section><iframe id="preview"></iframe>
+    </div>
+    <details>
+        <summary>Captions</summary>
+        <div id="captions">&nbsp;</div>
+    </details>
+
+
+    <!-- audio goes here -->
+    <div id="audioContainer" ;>
+        <audio id="audioclip" controls>
+            <!-- include ogg (vorbis or opus) for chrome/ffx -->
+            <!-- also include mp3, aac, or opus in a .caf container for safari -->
+
+            <!-- also include track with captions ... ok this doesn't work 'as is' with <audio>
+        we can make it a <video> and size it or use an additional library...
+      <track src="en_transcript.vtt" kind="captions" srclang="en" label="english_captions">
+      -->
+            <source src="../170a_media/database.ogg">
+            <source src="../170a_media/database.m4a">
+            <track src="captions/07_database.vtt" default lang="en">
+
+        </audio>
+        <div>Playback rate: </div>
+        <div id="pbrate">100%</div>
+        <div><input type="range" autocomplete="off" min="75" value="100" max="160" step="5"></div>
+    </div>
+    <section id="checkbox"><input id="nochanges" name="nochanges" type="checkbox">
+        <label for="nochanges">Prevent audio from changing editor</label>
+    </section>
+
+    <!-- Chapters follow this format, li with data-start in hh:mm:ss of where they begin -->
+
+    <h1>chapters</h1>
+    <ul id="index">
+        <li class="chapter" data-start="00:00:00">Intro</li>
+        <li class="chapter" data-start="00:00:37">...</li>
+        <li class="chapter" data-start="00:01:13">wrapping up!</li>
+    </ul>
+    <h1>notes</h1>
+
+    <h2>Documentation</h2>
+
+
+
+
+    <h1>resources</h1>
+    documentation for...
+    <ul>
+        <li>positioning</li>
+        <li>sticky</li>
+        <li>transforms</li>
+        ...
+
+    </ul>
+
+
+    <pre style="display: none">
+
+    <section style="display: none;">
+
+</pre>
+    <script src="../talkthrough-library/cmexts.js "></script>
+
+    <script src="database.js"> </script>
+    <script src="170a.js"></script>
+</body>

@@ -1,0 +1,27 @@
+body {
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+video {
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 5%;
+    position: absolute;
+}
+
+#caption {
+    width: 100%;
+    position: absolute;
+    bottom: 70px;
+    color: black;
+    font-size: 20pt;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: white 2px 2px 2px;
+    z-index: 100;
+}

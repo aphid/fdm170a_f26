@@ -1,0 +1,268 @@
+<html>
+
+<head>
+    <!-- begin jszip -->
+    <script src="../talkthrough-library/js-includes/jszip.min.js"></script>
+    <script src="../talkthrough-library/js-includes/jszip-utils.min.js"></script>
+
+    <!-- begin codemirror includes-->
+    <script src="../talkthrough-library/js-includes/FileSaver.min.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/lib/codemirror.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/xml/xml.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/css/css.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/comment/comment.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldcode.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/comment-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/jshint.js"></script>
+    <script src="../talkthrough-library/js-includes/csslint.js"></script>
+    <script src="../talkthrough-library/js-includes/popcorn-complete.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/javascript-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/json-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/hint/css-hint.js"></script>
+
+
+
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/lint/lint.css">
+    <!-- end codemirror includes-->
+
+    <!-- talkthrough css and code-->
+    <link rel="stylesheet" href="../talkthrough-library/style.css">
+    <link rel="stylesheet" href="170a.css">
+
+    <title>#2 concrete poetry</title>
+</head>
+
+<body>
+
+    <h1>talkthrough: concrete poetry</h1>
+
+    <!-- buttons for tabs for the editor -->
+    <section id="buttons"></section>
+
+    <!-- live preview -->
+    <div id="live">
+        <section id="textareas"></section><iframe id="preview"></iframe>
+    </div>
+    <details>
+        <summary>Captions</summary>
+        <div id="captions">&nbsp;</div>
+    </details>
+
+    <!-- audio goes here -->
+    <div id="audioContainer" ;>
+        <audio id="audioclip" controls>
+            <!-- include ogg (vorbis or opus) for chrome/ffx -->
+            <!-- also include mp3, aac, or opus in a .caf container for safari -->
+
+            <!-- also include track with captions ... ok this doesn't work 'as is' with <audio>
+        we can make it a <video> and size it or use an additional library...
+      <track src="en_transcript.vtt" kind="captions" srclang="en" label="english_captions">
+      -->
+            <source src="../170a_media/170a_concrete_treated.ogg">
+            <source src="../170a_media/170a_concrete_treated.m4a">
+            <track src="captions/02_concrete_treated.vtt" default lang="en">
+
+        </audio>
+        <div>Playback rate: </div>
+        <div id="pbrate">100%</div>
+        <div><input type="range" autocomplete="off" min="75" value="100" max="160" step="5"></div>
+    </div>
+    <section id="checkbox"><input id="nochanges" name="nochanges" type="checkbox">
+        <label for="nochanges">Prevent audio from changing editor</label>
+    </section>
+
+    <!-- Chapters follow this format, li with data-start in hh:mm:ss of where they begin -->
+    <section id="lower">
+        <h1>chapters</h1>
+        <ul id="index">
+            <li class="chapter" data-start="00:00:00">Intro</li>
+            <li class="chapter" data-start="00:00:37">Structural overview, block and inline</li>
+            <li class="chapter" data-start="00:2:06">CSS overview, classes</li>
+            <li class="chapter" data-start="00:2:35">About the poem</li>
+            <li class="chapter" data-start="00:2:57">Talking through HTML and CSS</li>
+            <li class="chapter" data-start="00:9:07">Wrapping up</li>
+
+        </ul>
+        <h1>notes</h1>
+
+        <h2>on blank space</h2>
+        <p><em style="background-color: orange">haha line break machine go br</em></p>
+        <p>I use a couple &lt;br&gt; tags in this project, but I didn't discuss them in the talkthrough</p>
+        <p>BR stands for break, and inserts a single line break</p>
+        <p>In the early days of the web, BR tags were used to add blank space to the web. We have many more tools to do this
+            now than we did back then (most of which are a bit more elegant), and they've fallen out of fashion</p>
+        <p>But for creating vertical space in a poem? They are a good way to do that. You could also add a class that adds
+            margin-top or padding-top to an element.</p>
+
+        <p>the &lt;pre&gt; tag is for preformatted text, and any blank space inside it will be preserved</p>
+        <p>To add blank space within &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a line of text (like I used
+            here), you can also type out &amp;nbsp; which is a special character called "non-breaking space". You also need
+            special characters for &amp;, &gt; and other otherwise-reserved characters in html. Here's a <a href="https://dev.w3.org/html5/html-author/charref">list</a> of them from the w3c.</p>
+
+        <aside>note: I am using the term 'blank space' over what was customarily referred to as 'white space' in graphic
+            design, where white refers to the most ubiquitous background color of paper. Colors in HTML are far more variable.
+        </aside>
+
+
+
+
+        <h1>resources</h1>
+        documentation for...
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">CSS Positioning</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">CSS
+                    Transforms</a></li>
+            <li><a href="https://cssgenerator.org/transform-css-generator.html">a CSS tranform generator</a></li>
+        </ul>
+
+    </section>
+    <pre style="display: none">
+
+    <section style="display: none;">
+      Alright, let's talkthrough the code for this concrete poem, or this non-concrete poem that I have concretized.
+       
+      By this time, you should already be familiar with the structure of HTML and some of the basics of using CSS to position
+      elements. If you haven't yet, check out the resources assigned for this week.
+      
+      Before I start moving through the code, I'm going to talk broadly about the structure and briefly about the structural elements that make up this poem, and a little about the block and inline display modes.
+      
+      the first tags used in this page, for the poem's title and attribution, are heading tags, which in html are numbered h1 through h6, where h1 is for top level headings and the lower numbers for subheadings.
+      
+       each line of the poem is surrounded by block element tags, either div or p (p stands for paragraph).  block elements start on a their own new line, and by default p tags have a line's worth of margin above them. I don't use a p for every line because a some of the lines contain divs, and you're not supposed to put additional block elements inside a paragraph.
+      
+      i also use div tags to group parts of the poem that i want to style together; divs are a generic block level element.
+      by generic I mean 'div' doesn't really signify a purpose in the way that paragraph or image does. you can think of them
+      structurally as a block of html that can contain anything, including other divs and tags, or nothing. An empty div tag can still have height and width
+      and, a background, and other properties applied using CSS.
+      
+      similarly, i am using spans to group parts of lines of text for styling. spans are also generic, but unlike divs they
+      are inline elements.  inline elements do not break the line, so they are good for styling within a cluster of text or other inline elements.
+      
+      if this feels a bit confusing, try changing some of my spans into divs and see what happens (but don't forget to change the closing tags, too)
+      
+      i haven't applied any stying to the p tag itself, instead I'm using classes to do this work.
+      
+      we'll look at the CSS a bit later, but before we do, I will point out that the only tag I have styled directly is
+      the body to change the background color to e5e5e5, which is a little less white than it would be by default.
+      
+      all the other styling that's happening on the page here is accomplished using classes. 
+      
+      rather than talking through the HTML from top to bottom and then the CSS from top to bottom like I did with the tables,
+      I'm going to be moving back and forth a bit.
+      
+      Finally, before I start - a bit about the poem that I've excerpted here. Diane di Prima's Revolutionary Letters 
+      was published in 1971
+      by City Lights Books. I chose this poem because it speaks, I think, quite directly to this moment. It also asks the reader
+      to think about space and position, which is also what this assignment is about at a much more formal level. 
+      
+      
+      Alright, let's get started
+
+      Our HTML starts out as it often does, doctype, language, which should be set for accessibility reasons.
+
+      in our head we have our title,
+      and links to 2 CSS files, the first one we'll find in the CSS
+      the second is an embed from Google Fonts. We'll talk about that a little later.
+
+  next, in the body: 
+      the title and author are wrapped in heading tags, h1 and h2; in headers h1 is the largest
+      default size, h6 is the smallest.
+
+      both h3 and h4 tags have the same class attached to them "fixed" let's see what that is.  Let's take a look at that
+
+      You should have already learned a bit about different positioning types, relative, absolute,
+      and fixed.  This class is relatively new to CSS and it automatically transitions from behaving
+      like relative -- it sits within its parent element... until it would be scrolled off the page.
+      then it behaves like fixed. 
+
+      and while we're here, take a look at the next class, poem.  it has a margin of 80 pixels above it,
+      that's a touch over an inch on 72 pixel per inch displays.
+
+      we'll come back to the CSS, but take note that everything else here is a class, denoted by the "."
+      before each selector.
+      
+      looking back at the html, the first line of the poem starts with a p tag,
+      that p has two classes: letters and large.  then a span starts before the first word with
+      class "vert". Every other word in the line has a span with the class vert.
+
+      Back to the CSS:
+      Large sets the font-size to 1.3 em.  ems are measued by the font size of the current element.  
+      so 1 em is regular size of a p tag.  with 'large', it's 130% that size. a bit bigger.
+
+      The letters class which is applied to the entire line has letter-spacing set,
+      Setting the letter-spacing to .7 em means there's not a full letter's space between each letter. 
+      Pretty close, though.
+
+      The vert class adds two properties:
+      writing-mode: veretical-lr which is for vertical text that is ordered left to right (some languages would go rl);
+      and text-orientation upright means that the letters are rotated so that they are upright rather than rotated.
+      
+      I'll comment that line out and let's see how it changes.
+
+      Let's look at the next class, turn.
+      The turn class adds a transform property, rotating elements 7 degrees.  
+      But the text seems to be turning more than 7, why? 
+      Looking at the HTML,
+      we see that each group of words has a div, but they aren't encapsulated like the last line, opening and closing
+      around each word  Rather, they are nested, a div in a div in a div in a div,
+      and since each of these divs has the class that adds rotation, they are adding together.
+      I'm going to uncomment the border property to make it clearer how they 'stack'.
+
+      This class also changes the display property of these spans from inline to inline-block.  Inline-block is similar to inline
+      where content will flow without breaking a line, but it also obeys some positioning rules that inline elements don't.
+      Try taking this rule out and see what happens.
+      
+
+      We have a similar dynamic with nested SPAN tags in the next line. the 'grow' class has a font-size of 2 em.
+      double the font size. Since these are nested, the words increase by double each time another span is added.
+
+      the next line makes use of the position property.
+      an element with relative positioning will follow the normal "flow" of the document,
+      the outer element here is positioned with relative, but the inner element is positioned with "absolute";
+      this means it obeys top: left: right: bottom: for positioning. 
+
+      There are spans around the first and last word, the huge class sets the font-size to 6 em.  If you were to nest
+      these, the text would become so big you'd only see parts of a letter at a time. Something to experiment with!
+      
+      the next line has 3 classes attached to the p tag: huge and turn, which we've already looked at, and marker.
+      Marker is the other half of the embed from google fonts. 
+
+      this line has 'large' applied to the p tag, and then both vert and turn applied to the words "old gang" using a span.
+
+      finally, we have a div with large applied to it, and a class we have't seen yet, 'perspective'
+      perspective applied a transform, similar to the rotation I used in the turn class.
+      The perspective property determines how close you are in the 3d space, and then rotating on the y axis 
+      effectively tilts the contents toward us. the relationship between these numbers is a little noninuitive 
+      and it took quite a bit of tweaking to not go off the page.
+      
+
+      Before you start of on your assignment,  I encourage you to poke around in this stylesheet, try changing some of the numbers and other values and
+      watch what happens. And try adding or removing some of the classes from different elements.
+
+      As you design your classes, think about how you can use them modularly.
+      This assignment gives you a lot of latitude to experiment, you can layer things on top of one another,
+      you can play with scale and make the page enormous or tiny, think about 
+
+      Feel free to use some of this css in yours, but I encourage you to go off in your own direction,
+      experiment with different rules, positionings, colors, let the content of the poem inspire you.
+
+
+</pre>
+    <script src="../talkthrough-library/cmexts.js"></script>
+
+    <script src="concrete.js"></script>
+    <script src="170a.js"></script>
+
+</body>

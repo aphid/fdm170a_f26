@@ -1,0 +1,88 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.sticky {
+  font-size: 15px;
+  position: sticky;
+  top: 20px;
+}
+
+.poem {
+  margin-top: 80px;
+}
+
+.letters {
+  letter-spacing: 0.7em;
+}
+
+.words {
+  word-spacing: 2.5em;
+}
+
+.turn {
+  transform: rotate(7deg);
+  margin-left: 10px;
+  margin-top: 10px;
+  /* border: 1px solid #333;*/
+  background: #e5e5e5;
+  display: inline-block;
+}
+
+
+.large {
+  font-size: 1.3em;
+}
+
+.huge {
+  font-size: 6em;
+}
+
+.block {
+  position: relative;
+  background: #111;
+  color: #eee;
+  font-family: sans-serif;
+  width: 90vw;
+  border: 2px dotted red;
+  min-height: 300px;
+  margin-bottom: 30px;
+}
+
+
+.botright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.grow {
+  font-size: 2em;
+}
+
+.vert {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.tilt {
+  transform: rotate(-5deg);
+}
+
+.center {
+  text-align: center;
+}
+
+.perspective {
+  padding: 5px;
+  background: black;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: #e5e5e5;
+  transform: perspective(320px) rotateY(-30deg);
+}
+
+.marker {
+  font-family: 'Permanent Marker', cursive;
+  background: transparent;
+}

@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <!-- begin jszip -->
+    <script src="../talkthrough-library/js-includes//jszip.min.js"></script>
+    <script src="../talkthrough-library/js-includes//jszip-utils.min.js"></script>
+
+    <!-- begin codemirror includes-->
+    <script src="../talkthrough-library/js-includes//FileSaver.min.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/lib/codemirror.js"></script>
+
+    <script src="../talkthrough-library/js-includes//codemirror/mode/javascript/javascript.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/mode/xml/xml.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/mode/css/css.js"></script>
+
+    <script src="../talkthrough-library/js-includes//codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/comment/comment.js"></script>
+
+    <script src="../talkthrough-library/js-includes//codemirror/addon/fold/foldcode.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/fold/foldgutter.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/fold/brace-fold.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/fold/xml-fold.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/fold/comment-fold.js"></script>
+    <script src="../talkthrough-library/js-includes//jshint.js"></script>
+    <script src="../talkthrough-library/js-includes//csslint.js"></script>
+    <script src="../talkthrough-library/js-includes//popcorn-complete.js"></script>
+
+    <script src="../talkthrough-library/js-includes//codemirror/addon/lint/lint.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/lint/javascript-lint.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/lint/json-lint.js"></script>
+    <script src="../talkthrough-library/js-includes//codemirror/addon/hint/css-hint.js"></script>
+
+
+
+    <link rel="stylesheet" href="../talkthrough-library/js-includes//codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes//codemirror/addon/fold/foldgutter.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes//codemirror/addon/lint/lint.css">
+    <!-- end codemirror includes-->
+
+    <!-- talkthrough css and code-->
+    <link rel="stylesheet" href="../talkthrough-library/style.css">
+
+    <link rel="stylesheet" href="170a.css">
+
+    <title>#4 drawings</title>
+</head>
+
+<body>
+
+    <h1>talkthrough: drawings</h1>
+
+    <!-- buttons for tabs for the editor -->
+    <section id="buttons"></section>
+
+    <!-- live preview -->
+    <div id="live">
+        <section id="textareas"></section><iframe id="preview"></iframe>
+    </div>
+    <details>
+        <summary>Captions</summary>
+        <div id="captions">&nbsp;</div>
+    </details>
+
+
+    <!-- audio goes here -->
+    <div id="audioContainer" ;>
+        <audio id="audioclip" controls>
+            <!-- include ogg (vorbis or opus) for chrome/ffx -->
+            <!-- also include mp3, aac, or opus in a .caf container for safari -->
+
+            <!-- also include track with captions ... ok this doesn't work 'as is' with <audio>
+        we can make it a <video> and size it or use an additional library...
+      <track src="en_transcript.vtt" kind="captions" srclang="en" label="english_captions">
+      -->
+
+            <source src="../170a_media/drawing.ogg">
+            <source src="../170a_media/drawing.m4a">
+            <track src="captions/04_drawing.vtt" default lang="en">
+
+        </audio>
+        <div>Playback rate: </div>
+        <div id="pbrate">100%</div>
+        <div><input type="range" autocomplete="off" min="75" value="100" max="160" step="5"></div>
+    </div>
+    <section id="checkbox"><input id="nochanges" name="nochanges" type="checkbox">
+        <label for="nochanges">Prevent audio from changing editor</label>
+    </section>
+    <section id="lower">
+        <!-- Chapters follow this format, li with data-start in hh:mm:ss of where they begin -->
+
+        <h1>chapters</h1>
+        <ul id="index">
+            <li class="chapter" data-start="00:00:00">Intro</li>
+            <li class="chapter" data-start="00:01:13">What is a Canvas?</li>
+            <li class="chapter" data-start="00:04:39">CSS</li>
+            <li class="chapter" data-start="00:06:01">The Basics</li>
+            <li class="chapter" data-start="00:14:52">Lines? Lines.</li>
+            <li class="chapter" data-start="00:23:16">A first attempt</li>
+            <li class="chapter" data-start="00:27:32">Plan &#x1f41d;</li>
+            <li class="chapter" data-start="00:30:59">Third time's a charm?</li>
+
+
+        </ul>
+        <h1>notes</h1>
+
+
+        <h2>Notes on units</h2>
+
+        <p>Absolute measurements (cm, mm, in, etc.) are not recommended for screens.</p>
+        <img src="img/not_recommended.png" alt="a screenshot of a table on of the linked website">
+        <blockquote>
+            There is another reason to avoid absolute units for other uses than print: You look at different screens from
+            different distances. 1cm on a desktop screen looks small. But the same on a mobile phone directly in front of your
+            eyes looks big. It's better to use relative units, such as em, instead. </blockquote>
+        World Wide Web Consortium, <a href="https://www.w3.org/Style/Examples/007/units.en.html">CSS Tips and Tricks</a>
+
+
+
+
+        <h1>resources</h1>
+        documentation for...
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing Shapes</a></li>
+            ...
+
+        </ul>
+
+    </section>
+    <script src="../talkthrough-library/cmexts.js "></script>
+
+    <script src="drawings.js"> </script>
+    <script src="170a.js"></script>
+</body>

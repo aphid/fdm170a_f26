@@ -1,0 +1,347 @@
+<html>
+
+<head>
+    <!-- begin jszip -->
+    <script src="../talkthrough-library/js-includes/jszip.min.js"></script>
+    <script src="../talkthrough-library/js-includes/jszip-utils.min.js"></script>
+
+    <!-- begin codemirror includes-->
+    <script src="../talkthrough-library/js-includes/FileSaver.min.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/lib/codemirror.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/xml/xml.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/mode/css/css.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/comment/comment.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldcode.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/fold/comment-fold.js"></script>
+    <script src="../talkthrough-library/js-includes/jshint.js"></script>
+    <script src="../talkthrough-library/js-includes/csslint.js"></script>
+    <script src="../talkthrough-library/js-includes/popcorn-complete.js"></script>
+
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/javascript-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/lint/json-lint.js"></script>
+    <script src="../talkthrough-library/js-includes/codemirror/addon/hint/css-hint.js"></script>
+
+
+
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/fold/foldgutter.css">
+    <link rel="stylesheet" href="../talkthrough-library/js-includes/codemirror/addon/lint/lint.css">
+    <!-- end codemirror includes-->
+
+    <!-- talkthrough css and code-->
+    <link rel="stylesheet" href="../talkthrough-library/style.css">
+    <link rel="stylesheet" href="170a.css">
+    <title>#3 montage</title>
+</head>
+
+<body>
+
+    <h1>talkthrough: montage</h1>
+
+    <p style="width:60%; font-size: 1.2em"><span style="text-shadow: 3px 3px 1px black; font-weight: bold; font-size: 2em; color: pink">important!</span> New
+        feature!
+        There are multiple JS tabs in this talk-through, only one will work at a time. The selected tab, which designated
+        by the round button, is the one you will get in your zip file when you save. You should only use js_1 under special conditions explained in the
+        talk-through. js_2 should work fine on both your computer and the school server. I discuss this in the JSON and Wrapping Up chapters.</p>
+    <!-- buttons for tabs for the editor -->
+    <section id="buttons"></section>
+
+    <!-- live preview -->
+    <div id="live">
+        <section id="textareas"></section><iframe id="preview"></iframe>
+    </div>
+    <details>
+        <summary>Captions</summary>
+        <div id="captions">&nbsp;</div>
+    </details>
+
+
+    <!-- audio goes here -->
+    <div id="audioContainer" ;>
+        <audio id="audioclip" controls>
+            <!-- include ogg (vorbis or opus) for chrome/ffx -->
+            <!-- also include mp3, aac, or opus in a .caf container for safari -->
+
+            <!-- also include track with captions ... ok this doesn't work 'as is' with <audio>
+        we can make it a <video> and size it or use an additional library...
+      <track src="en_transcript.vtt" kind="captions" srclang="en" label="english_captions">
+      -->
+            <source src="../170a_media/montage.ogg">
+            <source src="../170a_media/montage.m4a">
+            <track src="captions/03_montage.vtt" default lang="en">
+
+
+        </audio>
+        <div>Playback rate: </div>
+        <div id="pbrate">100%</div>
+        <div><input type="range" autocomplete="off" min="75" value="100" max="160" step="5"></div>
+    </div>
+    <section id="checkbox"><input id="nochanges" name="nochanges" type="checkbox">
+        <label for="nochanges">Prevent audio from changing editor</label>
+    </section>
+
+    <section id="lower">
+        <!-- Chapters follow this format, li with data-start in hh:mm:ss of where they begin -->
+        <h2>Chapters</h2>
+
+        <ul id="index">
+            <li class="chapter" data-start="00:00:00">Intro</li>
+            <li class="chapter" data-start="00:00:59">HTML</li>
+            <li class="chapter" data-start="00:03:33">CSS</li>
+            <li class="chapter" data-start="00:04:53">JSON</li>
+            <li class="chapter" data-start="00:10:29">JavaScript
+                <ul>
+                    <li class="chapter" data-start="00:10:46">Fast runthrough</li>
+                    <li class="chapter" data-start="00:12:13">Slow/Close read</li>
+                </ul>
+            </li>
+            <li class="chapter" data-start="00:19:10">Wrapping Up</li>
+        </ul>
+
+
+        </ul>
+        <h3>addendum/errata</h3>
+
+
+        <p>A couple minutes into the video I explain that &lt;source&gt; is maybe the only element allowed inside a video
+            tag.
+            It's certainly the most common, but there is another one and it's important for accessibility. The &lt;track&gt;
+            element is used to
+            desginate embedded timed text tracks. You can find documentation for that element <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">here</a> </p>
+        <h3>resources</h3>
+        <ul>
+            <li><a href="https://www.w3.org/2010/05/video/mediaevents.html">W3C Media Events, Properties, and Methods</a></li>
+            <li>about video events: <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canplay_event">canplay</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event">loadedmetadata</a>,
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">The Fetch API</a>
+                <ul>
+                    <li>(<img style="width: 300px;" src="https://compote.slate.com/images/e5e29239-a786-431d-b285-3e4640f6c20b.png">)</li>
+                </ul>
+            </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">await/async</a>
+            </li>
+
+
+        </ul>
+
+    </section>
+    <pre style="display: none">
+
+      intro
+      Hi there. Today 
+      We're going to be working with video, and hopefully doing so in a way
+      that leads to an understanding of some of the ways in which the materiality
+      of moving images on the web is different than some of the other forms that
+      we've encountered. We're also going to start easing into javascript, and
+      also JSON, a common data format used by javascript and many other languages. 
+
+      a bit about video
+
+      Video has been supported natively by browsers for only about 12 years,
+      and by natively I mean that the browser itself is capable of loading and
+      playing video without an external plugin like Flash or Quicktime. The
+      difference between these earlier forms of video-on-the-web and html video
+      is that video can be positioned and styled using CSS and monitored
+      and controlled using javascript.
+
+      let's take a look at our HTML.
+
+      There isn't much to it, is there?
+
+      We have the html document basics at the top
+      
+      in our body, we have an empty div with the id "comment"
+
+      a reminder that an ID is like a class but that they should only be applied
+      to one element in a page. this div will hold some descriptive text
+      that will be injected using javascript.
+
+      our next tag is video, and it has an attribute, controls.
+      the presence of the controls attribute sets it, you don't need
+      controls=true, just the word without a value.  some other attributes video
+      can take are loop and mute. the controls attribute means that when the user's
+      mouse is hovered over the video element that it will show the default controls:
+       a play or pause button and a timeline and a way to go fullscreen. 
+
+      there's a link to a w3c page that shows all of the attributes, properties,
+      and events of the html video element. for what it's worth, there's also
+      an audio element that has almost all of the same features. it's what i'm
+      using in this talkthrough.
+
+      within the video is a source element set to .. well, it's a long URL from a copy
+      of the film that's hosted at the internet archive. I could have designated the URL
+      using a SRC attribute in the video tag itself, much like in an image tag,
+      the source tag is there in case you ever need to set multiple sources, which is sometimes necessary
+      because not every browser supports every audio or video codec.
+
+      and that's it! video on a page in 4 lines of our body.  you could do it one!
+      easy peasy.
+
+      let's look at the CSS.
+
+      black background,
+      no padding or margin on the body.  this makes the video fit a bit more snugly
+      against the edges.
+
+      the video width is set to 100% of its parent element,
+      and since no height is set it keeps its aspect ratio.
+      i'm using absolute positioning to anchor the video to the bottom of the page.
+
+      the caption div is similarly anchored to the bottom of the page,
+      but it is 70px higher, which should put it above the controls.
+      it's colored "papayaWhip", which is a warm light orangy color
+      i've set the font size and boldness so that it's a bit easier to read
+      and i've included a text-shadow so that if the background is light,
+      it will still be legibile.
+      z-index determines which elements are above which other elements in the stack
+      order of the page.  i set the caption to 100 so that it will always
+      sit over the video.
+
+      that's it for the css.  pretty straightforward; if there are any properties
+      you aren't familiar with and want to know more about, look them up on MDN!
+
+      before we look at the javascript, let's look at the JSON.
+
+      ok, what's going on here? 
+
+      we have a somewhat repetitive pattern of start times, end times, and descriptions
+      that functions a little like a pared down edit decision list.
+      the video, when played, will play these clips in order, and display the description
+      on screen.
+
+      Let's get into the syntax a bit.
+
+      JSON stands for JavsScript Object Notation.  It's a way to encode data
+      using a subset of javascript. If you open your browser developer tools
+      and look in the network tab on any reasonably complex website,
+      you'll find JSON being passed back and forth.  You have already written JSON,
+      perhaps unwititngly, by using the web, by creating metadata. Let's do it on purpose.
+
+       JSON can contain a few different kinds of things.
+      Numbers, strings -- which are groups of letters surrounded by quotes (and always double quotes in json)
+      booleans, like true or false (without quotes), arrays and objects.  
+      what is an array? an array is a list of things.  they don't have to be the same kind of things, but often are.
+      you're looking at an array with 4 objects in it. arrays are surrounded by brackets, like row 1 and 22.
+      and the things in the array are separated by commas, which we see on line 6,
+      line 11, and line 16.  
+      
+      the things separated by the commas are objects, which in JSON
+      are surrounded by braces.  objects are composed of properties, which are surrounded by doublequotes,
+      and values, separated by a comma.  the values can be any JSON valid thing.  they can be arrays or objects or strings or numbers.
+      
+      in the first object in this array, all of the properites are strings.
+      we know this because they have quotes around them.  the values for the first two properties,
+      start, and end, look like numbers, but numbers can't have colons in them,
+      so they are strings.  These are timestamps stored in what should be a familiar looking
+      SMTPE like format, with hours, minutes and seconds separated by colons.
+
+      in the other objects, the values of start and end are numbers. 
+      no quotes.  numbers can have decimals.  these are measured in seconds.
+
+      you can use either method of encoding time in your project.
+
+      notice that the fourth and last object does not have a comma at the end.
+      that's important.
+
+      let's watch what happens if I add one.  it broke!
+      but there's also an exclamation point on line 20, if you roll over it
+      it should say "unexpected comma".  these coding hints are called "linting"
+      and many text editors support it, but you may need to download a plugin.
+
+      There's also a JSON linting service at JSONlint.com,
+      you can copy and paste the contents of this tab into that if you get stuck,
+      but do be careful about pasting anything with personal data into a random
+      website!
+
+      For this assignment you'll be changing, and adding your own JSON objects
+      to the array here.  The JSON is loaded by the javascript and acted upon.
+
+
+      Let's take a look at the JS tab. at this point in the class, I don't expect
+      this to make a ton of sense, but I'm still going to walk - err - talkthrough
+      it.  
+
+      First a very fast run through, then more detailed.
+      The first two lines assign the video element and caption div to variables.
+      a function to load json
+
+      load the json into a variable
+      fill the captions div with the description from the first JSON object
+
+     when the video is capable of playing run the      "process" function.
+
+     the process function iterates through each object in the JSON,
+      for each, in order:  it does the following:
+      a quick test to make sure the duration isn't negative,
+      set the caption div text to the object's description
+      move the video's playhead to the start time of the object
+      wait until the video playhead passes
+    after it has done this process with every object in the JSON,
+
+    the video pauses and the caption textContent reads "FIN".
+
+    this function reports back when the video has passed a given time position.
+
+    and this one converts time strings into seconds.
+
+    and now a closer read.
+
+
+      the first two lines load elements from the Document Object Model -- our html
+      into variables.  there are 3 kinds of variable declarations, let, const, and
+      var.  querySelector is a method that runs on the document, and it takes
+      an argument that works just like a CSS selector - hash for IDs, dot for class.
+      no extra character for a tag. i'm loading the video and the caption into variables
+      so that I can do things with them later in the code.  using querySelector,
+      and its cousin querySelectorAll,
+      is something we'll be doing a lot of.
+
+      on line 5 I define a function to load some JSON. there are a few different
+      ways to define a function. this one takes one argument, url.
+      
+      i'm using the FETCH api
+      to do this, and fetch runs asynchronously. this function takes a URL
+      and then retrieves it and, assuming it is valid, RETURNS it as a javascript object.
+
+      on line 10 I am loading the JSON file (which is also in the JSON tab)
+      into a variable called data. the data variable contains the whole JSON array.
+
+      variables are a little like classes and ids, we can call them whatever we want
+      but we need to be consistent.
+  
+      the next line is assigning the textcontent property of the caption DIV. all dom objects have
+      a textContent property that contains the text stored inside the opening and closing tags.
+      in this case, textContent is being set to the first data object's description.
+      the 0 in brackets refers to the first object in the array (in code we start counting with 0 not 1);
+      and the .description corresponds to the property in the JSON. 
+
+      if your eyes are glazing over right now, it's fine, you don't need to touch this code for this assignment.
+
+      
+
+
+
+    
+
+
+
+
+
+
+
+
+    </pre>
+    <script src="../talkthrough-library/cmexts.js"></script>
+
+    <script src="montage.js"></script>
+    <script src="170a.js"></script>
+</body>
