@@ -8,7 +8,7 @@
 | **Instructor** | Dr. Abram Stern ([aphid@ucsc.edu](mailto:aphid@ucsc.edu)) |
 | **Pronouns** | *they/them/theirs* or *he/him/his* |
 | **Office Hours** | Mondays 10:00 AM–11:00 AM (By Appointment on Zoom/Element) |
-| **Appointments** | [Book a 15-minute appointment](https://canvas.ucsc.edu) *(Link TBD)* |
+| **Appointments** | *(Link TBD)* |
 | **Zoom Link** | *TBD* |
 
 ---
@@ -87,7 +87,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 | **1. Re-Sequencing** | [Re-Sequencing TalkThrough](https://170a-2025-f.github.io/TalkThroughs/resequencing.html) | [CodePen Starter](https://codepen.io/aphid/pen/YPwPZXw) |
 | **2. Concrete Poetry** | [Concrete Poetry TalkThrough](https://170a-2025-f.github.io/TalkThroughs/concrete.html) | [CodePen Starter](https://codepen.io/aphid/pen/PwZwpqp) |
 | **3. Montage** | [Montage TalkThrough](https://170a-2025-f.github.io/TalkThroughs/montage.html) | [CodePen Starter](https://codepen.io/aphid/pen/bNENqdo) |
-| **4. Drawings** | [Drawings TalkThrough](https://170a-2025-f.github.io/TalkThroughs/drawings.htmlhtml) | [CodePen Starter](https://codepen.io/aphid/pen/NPxPpqw) |
+| **4. Drawings** | [Drawings TalkThrough](https://170a-2025-f.github.io/TalkThroughs/drawings.html) | [CodePen Starter](https://codepen.io/aphid/pen/NPxPpqw) |
 | **5. Multiscreen** | [Multiscreen TalkThrough](https://170a-2025-f.github.io/TalkThroughs/drawings.html) | [CodePen Starter](https://codepen.io/wsack/pen/ExqYzGX) |
 | **6. Structures** | [Structures TalkThrough](https://170a-2025-f.github.io/TalkThroughs/structures.html) | [CodePen Starter](https://codepen.io/aphid/pen/jEWEBPz) |
 | **7. Database Cinema**| [Database Cinema TalkThrough](https://170a-2025-f.github.io/TalkThroughs/database.html) | [CodePen Starter](https://codepen.io/aphid/pen/pvgveJK) |
