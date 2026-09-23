@@ -1,7 +1,7 @@
 # FDM 170A: Fundamentals of Digital Media Production
 
 **University of California, Santa Cruz**  
-**Term:** Fall 2025 | **Format:** Online
+**Term:** Fall 2026 | **Format:** Online Async
 
 | Key | Details |
 | :--- | :--- |
