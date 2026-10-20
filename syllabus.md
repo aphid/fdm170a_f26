@@ -141,8 +141,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 * **Project Due:** Friday, October 2 (11:59 PM PT)
 * **Critiques Due:** Monday, October 5 (11:59 PM PT)
 
-<details>
-<summary><strong>Expand Recommended Tutorials</strong></summary>
+<details markdown="1"><summary><strong>Expand Recommended Tutorials</strong></summary>
 
 1. **Khan Academy: Intro to HTML** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/v/making-webpages-intro))
    * Welcome to the web!
@@ -160,6 +159,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 3. **Khan Academy: More HTML Tags** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css/html-tags-continued/pt/html-links))
    * Links, Internal Links, Tables, & Comments
    * Project: Recipe book
+
 </details>
 
 ---
@@ -168,8 +168,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 * **Project Due:** Friday, October 9 (11:59 PM PT)
 * **Critiques Due:** Monday, October 12 (11:59 PM PT)
 
-<details>
-<summary><strong>Expand Recommended Tutorials</strong></summary>
+<details markdown="1"><summary><strong>Expand Recommended Tutorials</strong></summary>
 
 1. **Khan Academy: CSS Text Properties** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css/css-text-properties/v/css-zen-garden))
    * Font families, sizing, shorthand, inheritance
@@ -179,6 +178,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 3. **Khan Academy: CSS Layout** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/pt/css-grouping-elements))
    * Box model, positioning, floating, flex elements
 4. **W3Schools: CSS Transform Property** ([Link](https://www.w3schools.com/cssref/css3_pr_transform.asp))
+
 </details>
 
 ---
@@ -208,8 +208,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 * **Project Due:** Friday, October 30 (11:59 PM PT)
 * **Critiques Due:** Monday, November 2 (11:59 PM PT)
 
-<details>
-<summary><strong>Expand Recommended Tutorials</strong></summary>
+<details markdown="1"><summary><strong>Expand Recommended Tutorials</strong></summary>
 
 1. **Khan Academy: Intro to JS & Drawing Basics** ([Link](https://www.khanacademy.org/computing/computer-programming/programming))
    * Drawing shapes, variables, animations, and math expressions
@@ -218,6 +217,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 3. **Khan Academy: Data Structures** ([Link](https://www.khanacademy.org/computing/computer-programming/programming/arrays/pt/intro-to-arrays))
    * Arrays, Objects, and Object-Oriented Design
 4. **W3Schools: Canvas API** ([Link](https://www.w3schools.com/graphics/canvas_intro.asp))
+
 </details>
 
 ---
@@ -226,14 +226,14 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 * **Project Due:** Friday, November 6 (11:59 PM PT)
 * **Critiques Due:** Mondaysday, November 9 (11:59 PM PT)
 
-<details>
-<summary><strong>Expand Recommended Tutorials</strong></summary>
+<details markdown="1"><summary><strong>Expand Recommended Tutorials</strong></summary>
 
 1. **Khan Academy: JS and the DOM** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css-js/js-and-the-dom/pt/putting-js-in-a-webpage))
 2. **Khan Academy: DOM Access & Modification** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css/html-js-dom-access/pt/finding-elements-by-id))
    * Finding elements, modifying styles, attributes, and innerHTML
 3. **Khan Academy: DOM Events** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-events/v/making-webpages-interactive-with-events))
    * Event listeners, form handling, and preventing default behavior
+
 </details>
 
 ---
@@ -242,11 +242,11 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 * **Project Due:** Friday, November 13 (11:59 PM PT)
 * **Critiques Due:** Tuesday, November 16 (11:59 PM PT)
 
-<details>
-<summary><strong>Expand Recommended Tutorials</strong></summary>
+<details markdown="1"><summary><strong>Expand Recommended Tutorials</strong></summary>
 
 1. **Khan Academy: Using JS Libraries** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css-js/using-js-libraries-in-your-webpage/a/whats-a-js-library))
    * Library integration, CDN hosting, and ecosystem selection
+
 </details>
 
 ---
