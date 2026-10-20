@@ -187,8 +187,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
 * **Project Due:** Friday, October 16 (11:59 PM PT)
 * **Critiques Due:** Monday, October 19 (11:59 PM PT)
 
-<details>
-<summary><strong>Expand Recommended Tutorials</strong></summary>
+<details><summary><strong>Expand Recommended Tutorials</strong></summary>
 
     1. **Khan Academy: More CSS Selectors** ([Link](https://www.khanacademy.org/computing/computer-programming/html-css/more-css-selectors/pt/using-multiple-css-classes))
        * Multiple classes, descendant selectors, specificity
