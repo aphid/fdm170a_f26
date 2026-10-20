@@ -197,7 +197,7 @@ Assignments will be published via [CodePen](https://codepen.io/). Please create 
     3. **CSS3 Reference Material**
        * [CSS3 Selectors Guide](https://www.teaching-materials.org/_deprecated/css3-selectors/)
        * [CSS3 FX & Properties Guide](https://www.teaching-materials.org/css3-fx/)
-    4. **HTML `<video>` Tag Docs**
+    4. **HTML \<video\> Tag Docs**
        * [W3Schools Video Reference](https://www.w3schools.com/tags/tag_video.asp)
        * [W3C Media Events](https://www.w3.org/2010/05/video/mediaevents.html)
 
