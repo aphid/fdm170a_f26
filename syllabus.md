@@ -8,7 +8,7 @@
 | **Instructor** | Dr. Abram Stern ([aphid@ucsc.edu](mailto:aphid@ucsc.edu)) |
 | **Pronouns** | *they/them/theirs* or *he/him/his* |
 | **Office Hours** | Mondays 10:00 AM–11:00 AM (By Appointment on Zoom/Element) |
-| **Appointments** | *(Link TBD)* |
+| **Appointments** | *[link here](https://calendar.app.google/vfyQ74qp6MHxEwur8)* |
 | **Zoom Link** | *TBD* |
 
 ---
